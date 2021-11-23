@@ -13,6 +13,9 @@
 		F20F89072746D10A00BD75FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F89052746D10A00BD75FF /* Main.storyboard */; };
 		F20F89092746D10D00BD75FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20F89082746D10D00BD75FF /* Assets.xcassets */; };
 		F20F890C2746D10D00BD75FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F890A2746D10D00BD75FF /* LaunchScreen.storyboard */; };
+		F20F89172747ABB700BD75FF /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F89162747ABB700BD75FF /* NewsModel.swift */; };
+		F20F89192747AD0600BD75FF /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F89182747AD0600BD75FF /* NewsManager.swift */; };
+		F20F891B2747AFD900BD75FF /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F891A2747AFD900BD75FF /* NewsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F20F89082746D10D00BD75FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20F890B2746D10D00BD75FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20F890D2746D10D00BD75FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20F89162747ABB700BD75FF /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		F20F89182747AD0600BD75FF /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		F20F891A2747AFD900BD75FF /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		F20F88FE2746D10A00BD75FF /* News */ = {
 			isa = PBXGroup;
 			children = (
+				F20F89152747AB9500BD75FF /* Controller */,
+				F20F89142747AB8F00BD75FF /* View */,
+				F20F89132747AB8400BD75FF /* Model */,
 				F20F88FF2746D10A00BD75FF /* AppDelegate.swift */,
 				F20F89012746D10A00BD75FF /* SceneDelegate.swift */,
-				F20F89032746D10A00BD75FF /* ViewController.swift */,
-				F20F89052746D10A00BD75FF /* Main.storyboard */,
 				F20F89082746D10D00BD75FF /* Assets.xcassets */,
-				F20F890A2746D10D00BD75FF /* LaunchScreen.storyboard */,
 				F20F890D2746D10D00BD75FF /* Info.plist */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		F20F89132747AB8400BD75FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F20F89162747ABB700BD75FF /* NewsModel.swift */,
+				F20F891A2747AFD900BD75FF /* NewsData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F20F89142747AB8F00BD75FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F20F89052746D10A00BD75FF /* Main.storyboard */,
+				F20F890A2746D10D00BD75FF /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F20F89152747AB9500BD75FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F20F89032746D10A00BD75FF /* ViewController.swift */,
+				F20F89182747AD0600BD75FF /* NewsManager.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20F89172747ABB700BD75FF /* NewsModel.swift in Sources */,
 				F20F89042746D10A00BD75FF /* ViewController.swift in Sources */,
+				F20F891B2747AFD900BD75FF /* NewsData.swift in Sources */,
+				F20F89192747AD0600BD75FF /* NewsManager.swift in Sources */,
 				F20F89002746D10A00BD75FF /* AppDelegate.swift in Sources */,
 				F20F89022746D10A00BD75FF /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJS8XS78C4;
 				INFOPLIST_FILE = News/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJS8XS78C4;
 				INFOPLIST_FILE = News/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
