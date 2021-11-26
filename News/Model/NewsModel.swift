@@ -15,5 +15,6 @@ struct NewsModel {
     let datePublished: [String]
     let content: [String]
     let sourceURL: [String]
+    let imageURL: [String]
 }
 

@@ -1,32 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P1n-E9-iav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P1n-E9-iav">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--News Feed Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsFeedScreen" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="at3-MY-Myf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="at3-MY-Myf">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="previewCell" id="WPY-Dg-Vnu">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="101" id="WPY-Dg-Vnu" customClass="NewsCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WPY-Dg-Vnu" id="3xP-CC-19F">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vmq-3D-cgc">
+                                                    <rect key="frame" x="5" y="5" width="150" height="91"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="Ia0-pk-noX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-1T-eDC">
+                                                    <rect key="frame" x="165" y="16" width="224" height="69"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin....." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9G-Uw-fQ5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="28.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-dv-dUB">
+                                                            <rect key="frame" x="0.0" y="38.5" width="224" height="30.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fz0-1T-eDC" secondAttribute="trailing" constant="5" id="3aR-f7-46w"/>
+                                                <constraint firstItem="Vmq-3D-cgc" firstAttribute="top" secondItem="3xP-CC-19F" secondAttribute="top" constant="5" id="6fd-Kf-ZHf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fz0-1T-eDC" secondAttribute="bottom" constant="5" id="R80-5T-p5B"/>
+                                                <constraint firstItem="fz0-1T-eDC" firstAttribute="top" secondItem="3xP-CC-19F" secondAttribute="topMargin" constant="5" id="T0y-2r-kAP"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vmq-3D-cgc" secondAttribute="bottom" constant="5" id="XAD-xZ-9ef"/>
+                                                <constraint firstItem="Vmq-3D-cgc" firstAttribute="leading" secondItem="3xP-CC-19F" secondAttribute="leading" constant="5" id="emL-tG-nQ0"/>
+                                                <constraint firstItem="fz0-1T-eDC" firstAttribute="leading" secondItem="Vmq-3D-cgc" secondAttribute="trailing" constant="10" id="rfu-aC-o5m"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="hwv-dv-dUB" id="BSh-Y0-4wS"/>
+                                            <outlet property="newsLabel" destination="S9G-Uw-fQ5" id="2Nu-ie-g7p"/>
+                                            <outlet property="thumbnailImage" destination="Vmq-3D-cgc" id="4xN-Ta-m0O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -55,6 +95,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="newsFeed" destination="at3-MY-Myf" id="NbH-dR-vHd"/>
                         <outlet property="searchTextField" destination="ueH-0L-OSV" id="zbM-L7-R4a"/>
                     </connections>
                 </viewController>
