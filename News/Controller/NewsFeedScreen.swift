@@ -23,22 +23,16 @@ class NewsFeedScreen: UIViewController {
         
         newsFeed.delegate = self
         newsFeed.dataSource = self
+        searchTextField.delegate = self
         
-        newsFeed.isHidden = true
+       // newsFeed.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        
-        //Clearing cache form thumbnail images
-        SDImageCache.shared.clearMemory()
-        SDImageCache.shared.clearDisk()
     }
+    
     @IBAction func searchButtonPressed(_ sender: UIBarButtonItem) {
-        if let input = searchTextField.text {
-            newsManager.fetchNews(query: input)
-        } else {
-            print("Something is wrong with the input text of the searchTextField")
-        }
+        searchTextField.endEditing(true)
     }
 }

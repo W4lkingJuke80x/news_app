@@ -50,9 +50,8 @@ struct NewsManager {
             var content: [String] = []
             var srcURL: [String] = []
             var imgURL: [String] = []
-            
-            
-            for n in 0...9 { // n is subject to change
+
+            for n in 0...19 { // n is subject to change
                 if let author = decodedData.articles[n].author {
                     auth.append(author)
                 } else {
