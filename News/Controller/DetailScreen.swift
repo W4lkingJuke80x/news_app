@@ -13,7 +13,7 @@ class DetailScreen: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var detailLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var sourceLabel: UILabel!
+    @IBOutlet var sourceLinkTextView: UITextView!
     @IBOutlet var dateLabel: UILabel!
     
     var newsTitle = ""
@@ -27,7 +27,7 @@ class DetailScreen: UIViewController {
         
         titleLabel.text = newsTitle
         imageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(systemName: "photo"))
-        sourceLabel.text = source
+        sourceLinkTextView.text = source
         dateLabel.text = date
         
         // Hard-coded text added due to API limits of description text
